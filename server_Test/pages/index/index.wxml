@@ -1,0 +1,65 @@
+<SearchInput></SearchInput>
+<!-- <view>
+  {{book_id}}
+  {{text}}
+  <image src="{{image}}"></image>
+  <navigator url="/pages/detail/index?book_id={{book_id}}">点击此查看小说详细内容</navigator>
+</view> -->
+<!-- 轮播图 -->
+<!-- <view class="index_swiper">
+    <swiper autoplay indicator-dots indicator-color="white" circular>
+      <swiper-item
+      wx:for="{{swiperList}}" wx:key="id">
+        <navigator url="{{item.navigator_url}}">
+          <image mode="widthFix" src="{{item.img}}"></image>
+        </navigator>
+      </swiper-item>
+    </swiper>
+  </view> -->
+
+  <view class="swiper-container">
+
+	<!-- loading -->
+	<block wx:if="{{showLoading}}">
+		<view class="donut-container">
+			<view class="donut"></view>
+		</view>
+	</block>
+
+
+	<!-- book swiper -->
+	<block wx:else>
+    
+		<swiper 
+			indicator-dots="{{indicatorDots}}" 
+			autoplay="{{autoplay}}" 
+			interval="{{interval}}" 
+			duration="{{duration}}" 
+			circular="{{circular}}" 
+			class="swiper" 
+			previous-margin="{{sideMargin}}" 
+			next-margin="{{sideMargin}}"
+		>
+	 		<block wx:for="{{bookList}}" wx:key="index">
+	 			<swiper-item class="swiper-item">
+					 <view 
+						 class="book-container bg-white" 
+						 hover-class="book-container-hover" 
+						 catchtap="goDetail" 
+						 data-id="{{item.book_id}}" 
+					>
+
+	 					<view class="book-image"> 
+	 						<image src="{{item.img}}" mode="scaleToFill"></image>
+	 					</view>
+	 					<view class="book-info">
+	 						<text class="book-name">{{item.book_name}}</text>
+	 						<text class="author">{{item.book_author}}</text>
+	 						<text class="publisher">{{item.sort}}</text>
+						 </view>
+	 				</view>
+	 			</swiper-item>
+			</block>
+		</swiper>
+	</block>
+</view>

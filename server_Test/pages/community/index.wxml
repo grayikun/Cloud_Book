@@ -1,0 +1,36 @@
+<view class="comment-container">
+    <view class="comment-title">
+      <text>--------- 最新帖子 ---------</text>
+    </view>
+    
+	<!-- // 加载中进度条 -->
+    <view class="comment-loading" wx:if="{{commentLoading}}">
+      <view class="donut"></view>
+    </view>
+    
+	<!-- // 评论布局列表 -->
+    <view class="comment-area" wx:else>
+		<!-- // 有评论数据 -->
+      <block wx:if="{{postList.length > 0}}">
+        <view class="comment-item" wx:for="{{postList}}" wx:key="id">
+        	<!-- // 头像 -->
+          <view class="avatar-container">
+            <image mode="scaleToFill" src="{{item.img}}" class="user-avatar"></image>
+          </view>
+			<!-- // 用户名、内容、评论时间 -->
+          <view class="comment-content">
+            <text class="user-name">{{item.uname}}-------->《{{item.book_name}}》</text>
+            <text class="user-comment">{{item.comm}}</text>
+            <text class="comment-time">{{item.time}}</text>
+
+            
+          </view>
+        </view>
+      </block>
+		<!-- // 没有评论提示布局 -->
+      <block wx:else>
+        <view class="comment-placeholder">来当第一个发帖子的人吧～</view>
+      </block>
+
+    </view>
+  </view>

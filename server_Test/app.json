@@ -1,0 +1,69 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/content/index",
+    "pages/books/index",
+    "components/SearchInput/SearchInput",
+    "pages/search/index",
+    "pages/introduce/index",
+    "pages/bookCollect/index",
+    "pages/user/index",
+    "pages/login/index",
+    "pages/writeComment/index",
+    "pages/comm/index",
+    "components/Uplmg/index",
+    "pages/community/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#426ab3",
+    "navigationBarTitleText": "小说网",
+    "navigationBarTextStyle": "white"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "是否允许获取当前位置"
+    }
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#ff2d4a",
+    "backgroundColor": "#fafafa",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "icons/index.png",
+        "selectedIconPath": "icons/index-o.png"
+      },
+      {
+        "pagePath": "pages/books/index",
+        "text": "分类",
+        "iconPath": "icons/category.png",
+        "selectedIconPath": "icons/category-o.png"
+      },
+      {
+        "pagePath": "pages/bookCollect/index",
+        "text": "书架",
+        "iconPath": "icons/book.png",
+        "selectedIconPath": "icons/book-o.png"
+      },
+      {
+        "pagePath": "pages/community/index",
+        "text": "论坛",
+        "iconPath": "icons/luntan.png",
+        "selectedIconPath": "icons/luntan-o.png"
+      },
+      {
+        "pagePath": "pages/user/index",
+        "text": "我的",
+        "iconPath": "icons/my.png",
+        "selectedIconPath": "icons/my-o.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

@@ -1,0 +1,78 @@
+<view class="book-container bg-white">
+
+    <view class="book-info">
+    <!-- // 书籍图片 -->
+      <image bindtap="preview" class="book-image" mode="scaleToFill" src="{{intro.img}}"></image>
+	<!-- // 书籍文字信息 -->
+      <view class="book-desc">
+        <text class="book-main-text">{{intro.book_name}}</text>
+        <text class="book-text">作者： {{intro.book_author}}</text>
+        <text class="book-text">分类： {{intro.sort}}</text>
+        
+
+
+      </view>
+    </view>
+    <view class="button-area" bindtap="handleCollect">
+          <text class="iconfont {{isCollect?'icon-jiaxingshoucangtianchong':'icon-jiaxingshoucang'}} "></text>
+          <view class="collect_text">收藏</view>
+    </view>
+</view>
+
+<view class="btm_tool">
+    <popup-left show="{{showleft}}" titles="{{titles}}"></popup-left>
+    <view class="tool_item btn_cart" bindtap="showleft">
+    查看章节目录
+    </view>
+    <view class="tool_item btn_buy" bindtap="handleRead">
+    开始阅读
+    </view>
+     <view class="tool_item btn_comment" open-type="getUserInfo" bindtap="writeComment" data-id="{{Book.book_id}}" data-name="{{Book.book_name}}">
+    写评论
+    </view>
+    <!-- <view class="writeComment" >
+      <view class="full-button"  open-type="getUserInfo" bindtap="writeComment" data-id="{{Book.book_id}}" data-name="{{Book.book_name}}"> 写评论 </view>
+    </view> -->
+</view>
+ 
+  <view class="comment-container">
+    <view class="comment-title">
+      <text>--------- 评论 ---------</text>
+    </view>
+    
+	<!-- // 加载中进度条 -->
+    <view class="comment-loading" wx:if="{{commentLoading}}">
+      <view class="donut"></view>
+    </view>
+    
+	<!-- // 评论布局列表 -->
+    <view class="comment-area" wx:else>
+		<!-- // 有评论数据 -->
+      <block wx:if="{{commentList.length > 0}}">
+        <view class="comment-item" wx:for="{{commentList}}" wx:key="id">
+        	<!-- // 头像 -->
+          <view class="avatar-container">
+            <image mode="scaleToFill" src="{{item.uavatar}}" class="user-avatar"></image>
+          </view>
+			<!-- // 用户名、内容、评论时间 -->
+          <view class="comment-content">
+            <text class="user-name">{{item.uname}}</text>
+            <text class="user-comment">{{item.comment}}</text>
+            <text class="comment-time">{{item.create_time}}      {{item.phone}}</text>
+            
+          </view>
+        </view>
+      </block>
+		<!-- // 没有评论提示布局 -->
+      <block wx:else>
+        <view class="comment-placeholder">来当第一个评论的人吧～</view>
+      </block>
+
+    </view>
+  </view>
+
+<!-- <view class="fixed-bottom block-full-width flex-container bg-white">
+      <button class="full-button" type="primary" open-type="getUserInfo" bindtap="writeComment" data-id="{{Book.book_id}}" data-name="{{Book.book_name}}"> 写评论 </button>
+    </view> -->
+
+

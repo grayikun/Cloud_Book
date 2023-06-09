@@ -1,0 +1,15 @@
+<view class="title">{{title}}</view>
+<text class="detail">{{detail}}</text>
+<view class="btm_tool">
+    <!-- <popup-left show="{{showleft}}" titles="{{titles}}"></popup-left> -->
+    <view class="tool_item btn_cart" bindtap="lastChap">
+    上一章
+    </view>
+    <view class="tool_item btn_buy" bindtap="nextChap">
+    下一章
+    </view>
+     <!-- <view class="tool_item btn_comment" open-type="getUserInfo" bindtap="writeComment" data-id="{{Book.book_id}}" data-name="{{Book.book_name}}">
+    写评论
+    </view> -->
+</view>
+

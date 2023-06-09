@@ -1,0 +1,33 @@
+  <view class="fb_main">
+    <view class="fb_title">请填写帖子内容</view>
+    <view class="fb_tips">
+       <picker mode='selector' range="{{selectorItems}}" bindchange="itemChange">
+          <view class="fb_new">你想选择的书籍为：<text style="font-color:red">{{isSelect}}</text></view>
+       </picker>
+    </view>
+   
+    <view class="fb_content">
+      <textarea value="{{textVal}}" bindinput="handleTextInput" placeholder="请写下您的读书感受"></textarea>
+        <view class="fb_tool">
+          <!-- <button bindtap="handleChooseImg">+</button> -->
+          <view class="up_img_item" wx:for="{{chooseImgs}}" 
+          wx:key="*this" bindtap="handleRemoveImg" data-index="{{index}}">
+          
+          <UpImg src="{{item}}"></UpImg></view>
+        </view>
+    </view>
+    <text>是否确认所填信息属实：</text>
+    <radio-group bindchange="radioChange">
+      <radio value="yes">是</radio>
+      <radio value="no">否</radio>
+    </radio-group>
+    <map id="map" latitude="{{latitude}}" longitude="{{longitude}}" show-location></map>
+    <view class="form_btn_wrap" wx:if="{{yesOrNo}}">
+      <button bindtap="handleFormSubmit" type="warn">
+        <icon type="success_no_circle" color="white" size="23"></icon>
+        提交
+      </button>
+    </view>
+  </view>
+
+

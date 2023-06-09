@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "UpImg": "../../components/Uplmg/index"
+  },
+  "navigationBarTitleText": "帖子发布"
+}

@@ -1,0 +1,51 @@
+.yd_overlay {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.yd_show_overlay {
+  width: 100%;
+  transition-property: width;
+  transition-duration: 900ms;
+  transition-timing-function: ease;
+}
+
+.yd_close_overlay {
+  width: 0;
+  transition-property: width;
+  transition-duration: 900ms;
+  transition-timing-function: ease;
+}
+
+.left_container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  background: rgb(255, 255, 255);
+  z-index: 999;
+  overflow: hidden;
+}
+
+.yd_left_content {
+  width: 60%;
+  transition-property: width;
+  transition-duration: 900ms;
+  transition-timing-function: ease;
+}
+.yd_left_content .mulu{
+  border-bottom: 1rpx solid #ccc;
+}
+.yd_left_content .titles{
+  padding: 10rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+.yd_left_content .titles .word {
+  display: flex;
+  font-size: 35rpx；
+  
+}

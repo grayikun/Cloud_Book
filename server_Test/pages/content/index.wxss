@@ -1,0 +1,114 @@
+.detail{
+  font-size: 40rpx;
+}
+.title{
+  font-size: 50rpx;
+  color: #f10808;
+  display: flex;
+  align-items: center;
+  padding: 10rpx 10rpx;
+
+}
+.book-container {
+  /*border: 1px solid black;*/
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50rpx 30rpx;
+}
+
+.book-info {
+  /*border: 1px solid red;*/
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.book-image {
+  width: 200rpx;
+  height: 300rpx;
+  box-shadow: 0 0 10rpx #cdcdcd;
+}
+
+.book-desc {
+  /*border: 1px solid yellow;*/
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-left: 30rpx;
+}
+
+.book-main-text {
+  color: #1e1e1e;
+  font-size: 50rpx;
+}
+
+.book-text {
+  font-size: 30rpx;
+  color: var(--themeColor);
+}
+
+.button-area {
+  /*border: 1px solid blue;*/
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.btm_tool {
+  border-top: 1rpx solid #ccc;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 90rpx;
+  background-color: #fff;
+  display: flex;
+}
+.btm_tool .tool_item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 24rpx;
+  position: relative;
+}
+.btm_tool .tool_item button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.btm_tool .btn_cart {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f70909;
+  color: #fff;
+  font-size: 30rpx;
+  font-weight: 600;
+   border-radius: 50px
+}
+.btm_tool .btn_buy {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f70909;
+  color: #fff;
+  font-size: 30rpx;
+  font-weight: 600;
+   border-radius: 50px
+
+}
+
+
+

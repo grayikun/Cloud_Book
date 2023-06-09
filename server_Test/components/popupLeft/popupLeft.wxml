@@ -1,0 +1,14 @@
+<!-- 阴影 -->
+
+<view class="yd_overlay  {{show?'yd_show_overlay':'yd_close_overlay'}}" bindtap="close_overlay"></view>
+
+<!-- 左侧栏目 -->
+<view bindtap="close_overlay" class="left_container  {{show? 'yd_left_content':'yd_close_overlay'}}">
+  <scroll-view scroll-y>
+    <view class="mulu">目录</view>
+    <navigator class="titles" wx:for="{{titles}}" wx:key="id" url="../../pages/content/index?content={{item.content}}&title={{item.title}}&book_name={{item.book_name}}&book_id={{item.book_id}}&id={{item.id}}" >
+      <view class="word">{{item.title}}</view>
+    </navigator>
+  </scroll-view>
+  
+</view>

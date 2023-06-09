@@ -1,0 +1,110 @@
+/* 
+.index_swiper swiper image{
+  width: 100%;
+}
+.index_swiper swiper {
+  width: 750rpx;
+  height: 400rpx;
+}
+
+180*240 */
+
+/* 整个布局的样式 */
+.swiper-container {
+	/*border: 1px solid red;*/
+	box-sizing: border-box;
+	padding: 120rpx 0 50rpx 0;
+	display: flex;
+  	flex-direction: column;
+  	/* 下面两个决定了居中样式 */
+	justify-content: center;
+	align-items: center;
+}
+
+/* 水平滑动组件样式 */
+.swiper {
+	width: 750rpx;
+	height: 800rpx;
+}
+/* 水平滑动组件中 单个卡片的样式 */
+.swiper-item {
+	/*border: 1px solid blue;*/
+	/* 宽高自动设为100% */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+/* 搜索样式 */
+.searchText{
+  border: 1px solid #e6e6e6;
+	width: 480rpx;
+	height: 20rpx;
+  	font-size: 18rpx;
+  	color: #cdcdcd;
+	padding: 30rpx 20rpx;
+	display: flex;
+	flex-direction: column;
+	/* 各行之间留有空白的容器内：效果看下方的图片 */
+	justify-content: space-around;
+	align-items: center;
+	border-radius: 20rpx;
+	box-shadow: 0 0 10rpx #dbdbdb;
+}
+/* 书籍 */
+.book-container {
+	border: 1px solid #e6e6e6;
+	width: 480rpx;
+	height: 720rpx;
+	padding: 30rpx 20rpx;
+	display: flex;
+	flex-direction: column;
+	/* 各行之间留有空白的容器内：效果看下方的图片 */
+	justify-content: space-around;
+	align-items: center;
+	border-radius: 20rpx;
+	box-shadow: 0 0 10rpx #dbdbdb;
+}
+/* 书籍按压效果 */
+.book-container-hover {
+	transform: scale(0.96,0.96);
+  	transition: all 1 ease 0;
+}
+/* 书籍图片样式 */
+.book-image {
+	/*border: 1px solid #cdcdcd;*/
+	/*box-shadow: 0 0 10rpx #dcdcdc;*/
+}
+/* 书籍图片样式 */
+.book-image > image {
+	width: 350rpx;
+}
+/* 书籍信息样式 */
+.book-info {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	/*border: 1px solid black;*/
+	margin-top: 20rpx;
+}
+/* 书籍名字样式 */
+.book-name {
+	color: #1e1e1e;
+	font-size: 35rpx;
+	margin-bottom: 8rpx;
+}
+/* 书籍作者样式 */
+.author {
+	color: #0b4bac;
+	font-size: 30rpx;
+	margin-bottom: 8rpx;
+}
+/* 书籍出版社样式 */
+.publisher {
+	color: #f00d0d;
+	font-size: 30rpx;
+}
+/* 加载中样式 */
+.donut-container {
+	padding-top: 200rpx;
+}
