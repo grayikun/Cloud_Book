@@ -5,7 +5,7 @@ const app = express()
 const mysql = require('mysql')
 const IPAddress = 'localhost'//因为这里是要链接远程数据库，ip 地址是 mysql 的地址！！本地就是 127.0.0.1，服务器上就自己找找看
 const UserName = 'root'
-const PWD = 'taeyeon'
+const PWD = '******'
 const DBName = 'articles'
 app.use(express.json())
 app.use(bodyParser.json())
